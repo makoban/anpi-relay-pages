@@ -166,7 +166,9 @@ h2 {
 .flow p,
 .privacy-cards p,
 .feature-list p,
-.trust-strip span {
+.trust-strip span,
+.top-log p,
+.family-grid p {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.9;
@@ -227,6 +229,53 @@ h2 {
   font-size: 13px;
   font-weight: 900;
   border: 1px solid var(--line);
+}
+
+.top-log {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 12px 28px rgba(17, 38, 50, 0.06);
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.log-header strong {
+  font-weight: 900;
+}
+
+.log-header span {
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(15, 183, 174, 0.12);
+  color: var(--teal-dark);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.top-log p {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f8fcfd;
+}
+
+.top-log b {
+  color: var(--ink);
+}
+
+.top-log .family-hit {
+  background: #fff7e9;
+  color: #81520f;
 }
 
 .hero-visual {
@@ -346,6 +395,11 @@ h2 {
   width: 100%;
 }
 
+.phone-image {
+  width: min(430px, 100%);
+  justify-self: center;
+}
+
 .relay-section {
   width: min(1260px, calc(100% - 32px));
 }
@@ -358,7 +412,7 @@ h2 {
 
 .flow {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 14px;
   margin-top: 18px;
 }
@@ -380,7 +434,8 @@ h2 {
 }
 
 .flow strong,
-.privacy-cards strong {
+.privacy-cards strong,
+.family-grid strong {
   display: block;
   margin-bottom: 8px;
   font-size: 19px;
@@ -401,6 +456,41 @@ h2 {
 
 .privacy-cards div {
   padding: 22px;
+}
+
+.family-section {
+  width: min(1180px, calc(100% - 32px));
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.family-grid div {
+  min-height: 250px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(17, 38, 50, 0.06);
+}
+
+.family-grid span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: #fff;
+  font-weight: 900;
+}
+
+.family-grid p {
+  margin-bottom: 0;
 }
 
 .free-section {
@@ -526,7 +616,8 @@ h2 {
   }
 
   .trust-strip,
-  .flow {
+  .flow,
+  .family-grid {
     grid-template-columns: 1fr;
   }
 
@@ -576,7 +667,9 @@ h2 {
   .flow p,
   .privacy-cards p,
   .feature-list p,
-  .trust-strip span {
+  .trust-strip span,
+  .top-log p,
+  .family-grid p {
     font-size: 15px;
     line-height: 1.8;
   }
