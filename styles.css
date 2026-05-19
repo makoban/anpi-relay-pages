@@ -552,6 +552,8 @@ h2 {
   color: #fff;
   font-size: 32px;
   font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
   box-shadow: 0 18px 40px rgba(6, 67, 62, 0.22);
 }
 
@@ -755,6 +757,8 @@ h2 {
   .free-mark {
     left: 28px;
     right: auto;
+    width: 128px;
+    font-size: 26px;
   }
 
   .site-footer {
