@@ -27,6 +27,7 @@ body {
   background: #f7fbff;
   color: var(--ink);
   letter-spacing: 0;
+  line-break: strict;
   overflow-x: hidden;
 }
 
@@ -98,16 +99,17 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+  grid-template-columns: minmax(470px, 0.95fr) minmax(0, 1.05fr);
   align-items: start;
-  gap: 28px;
-  width: min(1340px, calc(100% - 32px));
+  gap: clamp(28px, 4vw, 48px);
+  width: min(1260px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 70px 0 58px;
+  padding: 68px 0 58px;
 }
 
 .hero-copy {
   min-width: 0;
+  padding-top: 6px;
 }
 
 .free-badge {
@@ -124,7 +126,7 @@ a {
 
 .eyebrow,
 .section-kicker {
-  margin: 18px 0 10px;
+  margin: 18px 0 12px;
   color: var(--teal-dark);
   font-weight: 900;
   font-size: 14px;
@@ -138,17 +140,17 @@ p {
 }
 
 h1 {
-  max-width: 11em;
-  margin-bottom: 18px;
-  font-size: 64px;
-  line-height: 1.05;
+  max-width: 11.4em;
+  margin-bottom: 22px;
+  font-size: 50px;
+  line-height: 1.12;
   font-weight: 900;
   text-wrap: balance;
-  overflow-wrap: anywhere;
 }
 
 h1 span {
   display: block;
+  white-space: nowrap;
 }
 
 h2 {
@@ -179,15 +181,21 @@ h2 {
 }
 
 .lead {
-  max-width: 42em;
-  font-size: 19px;
+  max-width: 34em;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 1.95;
+}
+
+.lead span {
+  display: block;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 28px 0 22px;
+  margin: 26px 0 20px;
 }
 
 .primary-button,
@@ -236,7 +244,7 @@ h2 {
 .top-log {
   display: grid;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 16px;
   padding: 16px;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -269,6 +277,7 @@ h2 {
   padding: 10px 12px;
   border-radius: 14px;
   background: #f8fcfd;
+  overflow-wrap: anywhere;
 }
 
 .top-log b {
@@ -282,7 +291,7 @@ h2 {
 
 .hero-visual {
   box-sizing: border-box;
-  margin-top: 8px;
+  margin-top: 18px;
   padding: 12px;
   min-width: 0;
   overflow: hidden;
@@ -596,6 +605,12 @@ h2 {
   font-weight: 900;
 }
 
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 44px;
+  }
+}
+
 @media (max-width: 920px) {
   .nav-links {
     display: none;
@@ -609,12 +624,13 @@ h2 {
 
   .hero {
     min-height: 0;
-    padding-top: 42px;
-    gap: 28px;
+    padding-top: 40px;
+    gap: 30px;
   }
 
   .hero-copy {
     order: 1;
+    padding-top: 0;
   }
 
   .hero-visual {
@@ -657,9 +673,34 @@ h2 {
 
   h1 {
     max-width: 100%;
-    font-size: 32px;
-    line-height: 1.12;
-    text-wrap: wrap;
+    font-size: 31px;
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+
+  h1 span {
+    white-space: normal;
+  }
+
+  .hero {
+    padding-top: 32px;
+    gap: 24px;
+  }
+
+  .eyebrow {
+    margin-top: 16px;
+    margin-bottom: 10px;
+    font-size: 13px;
+  }
+
+  .lead {
+    font-size: 15px;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
   }
 
   h2 {
