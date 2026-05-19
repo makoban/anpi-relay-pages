@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>安否リレー | 通信遮断でも避難所を移動して安否情報を自動で受け渡す完全無料の防災アプリ</title>
-  <meta name="description" content="安否リレーは、災害時の通信遮断やネット接続が不安定な状況でも、避難所を移動しながら同じアプリ同士で安否情報を自動で受け渡し、家族登録と一致した安否は通知と全文表示で知らせる完全無料のiPhone防災アプリです。">
+  <meta name="description" content="安否リレーは、災害時の通信遮断やネット接続が不安定な状況でも、避難所を移動しながら同じアプリ同士で安否情報を自動で受け渡す完全無料のiPhone防災アプリです。接続ログ、保持数、伏せ字の名前と場所を確認できます。">
   <meta name="theme-color" content="#0fb7ae">
   <meta property="og:type" content="website">
   <meta property="og:title" content="安否リレー | 完全無料の防災アプリ">
@@ -33,7 +33,7 @@
     <nav class="nav-links" aria-label="ページ内ナビゲーション">
       <a href="#features">できること</a>
       <a href="#relay">安否リレー</a>
-      <a href="#family">家族連携</a>
+      <a href="#privacy">表示ルール</a>
       <a href="#free">完全無料</a>
     </nav>
   </header>
@@ -54,20 +54,20 @@
         </p>
         <div class="hero-actions">
           <a class="primary-button" href="#relay">自動リレーを見る</a>
-          <a class="secondary-button" href="#family">家族連携を見る</a>
+          <a class="secondary-button" href="#privacy">表示ルールを見る</a>
         </div>
         <ul class="hero-points" aria-label="安否リレーの特徴">
           <li>リレーは裏で自動</li>
           <li>TOPに接続ログを表示</li>
-          <li>家族なら通知と全文表示</li>
+          <li>名前と場所は伏せ字</li>
         </ul>
         <div class="top-log" aria-label="TOPに表示される接続ログの例">
           <div class="log-header">
             <strong>TOPログの例</strong>
             <span>自動リレー中</span>
           </div>
-          <p><b>10:42</b> 佐※木さんと接続。保持数は18人。</p>
-          <p class="family-hit"><b>10:46</b> 家族登録の「母」と一致。通知しました。</p>
+          <p><b>10:42</b> 未接続だった端末と接続しました。保持数は18人です。</p>
+          <p class="status-hit"><b>10:46</b> 新しい安否を3人分受け取りました。保持数は21人です。</p>
         </div>
       </div>
       <div class="hero-visual">
@@ -82,11 +82,11 @@
       </div>
       <div>
         <strong>つながった安心が見える</strong>
-        <span>TOPに接続ログ、伏せ字の名前、保持人数を表示します。</span>
+        <span>TOPに接続ログと保持人数、別枠に伏せ字の名前と場所を表示します。</span>
       </div>
       <div>
-        <strong>家族なら全文表示</strong>
-        <span>事前登録した家族の安否が届いた時だけ、通知と内容表示。</span>
+        <strong>中身は一覧表示しない</strong>
+        <span>安否メッセージやCSVの詳細は通常画面に出さず、必要な件数だけ見せます。</span>
       </div>
     </section>
 
@@ -116,7 +116,7 @@
         </div>
       </div>
       <figure class="image-panel phone-image">
-        <img src="assets/images/app-top-log.png" width="853" height="1844" alt="安否リレーのTOP画面。接続ログ、伏せ字の名前、家族通知、たすけて、いまの安否を入れるボタンが表示されている">
+        <img src="assets/images/app-top-log.png" width="853" height="1844" alt="安否リレーのTOP画面。接続ログ、保持数、伏せ字の名前と場所、たすけて、いまの安否を入れるボタンが表示されている">
       </figure>
     </section>
 
@@ -125,7 +125,7 @@
         <p class="section-kicker">RELAY</p>
         <h2>安否リレーは、ボタンではなく裏側で勝手に動く仕組みです。</h2>
         <p>
-          ひとりの端末だけで完結させず、同じアプリを持つ人が近くにいるたびに情報を受け渡します。ユーザーはリレーボタンを押す必要がなく、TOPで「誰とつながったか」「何人分保持しているか」を確認できます。
+          ひとりの端末だけで完結させず、同じアプリを持つ人が近くにいるたびに情報を受け渡します。ユーザーはリレーボタンを押す必要がなく、TOPで「接続・受信ログ」と「何人分保持しているか」を確認できます。
         </p>
       </div>
       <figure class="wide-image">
@@ -145,7 +145,7 @@
         <div>
           <span>3</span>
           <strong>TOPにログを表示</strong>
-          <p>伏せ字の名前、接続日時、保持人数を出して、受け渡しを見える化します。</p>
+          <p>接続日時、受信件数、保持人数を出して、受け渡しを見える化します。</p>
         </div>
         <div>
           <span>4</span>
@@ -155,12 +155,12 @@
       </div>
     </section>
 
-    <section class="section privacy-section">
+    <section id="privacy" class="section privacy-section">
       <div class="section-copy">
         <p class="section-kicker">PRIVACY</p>
-        <h2>非家族には伏せ字ログ。家族なら通知と全文表示。</h2>
+        <h2>接続ログと保持数。名前と場所は伏せ字。</h2>
         <p>
-          端末内では接続ログや保持数を中心に表示し、一般ユーザー同士では名前を伏せ字にします。事前に登録した家族の安否データだけは、端末側で一致判定して通知し、内容を完全表示します。
+          端末内では接続ログや保持数を中心に表示し、保持している名前と場所は別枠で伏せ字にします。安否メッセージやCSVの詳細は一覧表示せず、ネット復旧後の送信に備えて端末内で保持します。
         </p>
       </div>
       <div class="privacy-cards">
@@ -170,7 +170,7 @@
         </div>
         <div>
           <strong>名前は伏せ字表示</strong>
-          <p>一般表示では「田※中」「佐※木」のようにして、誰かがつながった安心だけを伝えます。</p>
+          <p>先頭と最後を伏せて表示します。例: 「佐々木」は「※々※」、「山田太郎」は「※田太※」になります。</p>
         </div>
         <div>
           <strong>30日で自動削除</strong>
@@ -181,32 +181,32 @@
 
     <section id="family" class="section family-section">
       <div class="section-heading">
-        <p class="section-kicker">FAMILY LINK</p>
-        <h2>家族連携は、事前のQRコードで安全に決めます。</h2>
+        <p class="section-kicker">FUTURE</p>
+        <h2>家族連携は、今後追加する場合の設計案です。</h2>
         <p>
-          名前だけで家族判定すると、同姓同名や入力違いで誤判定が起きます。安否リレーでは、家族グループを作ってQRコードで共有し、同じ家族キーを持つ端末だけが家族の安否を全文表示できる設計にします。
+          初期版では、受け取った安否の中身を一般画面に一覧表示しません。将来、家族だけに全文表示を追加する場合は、名前だけで判定せず、QRコードなどで共有した家族キーを使う設計にします。
         </p>
       </div>
       <div class="family-grid">
         <div>
           <span>1</span>
-          <strong>家族グループを作る</strong>
-          <p>代表者のiPhoneで家族グループを作り、家族キーを端末内に保存します。</p>
+          <strong>家族グループ案</strong>
+          <p>代表者のiPhoneで家族グループを作り、家族キーを端末内に保存する案です。</p>
         </div>
         <div>
           <span>2</span>
           <strong>QRコードで登録</strong>
-          <p>家族にQRコードや招待コードを渡して、同じ家族グループに登録します。</p>
+          <p>家族にQRコードや招待コードを渡して、同じ家族グループに登録する想定です。</p>
         </div>
         <div>
           <span>3</span>
-          <strong>家族用データを付ける</strong>
-          <p>安否情報には、家族だけが開ける暗号化データを一緒に持たせます。</p>
+          <strong>家族用データ案</strong>
+          <p>安否情報には、家族だけが開ける暗号化データを一緒に持たせる案です。</p>
         </div>
         <div>
           <span>4</span>
-          <strong>一致したら通知</strong>
-          <p>リレーで家族の安否が届いた時だけ、通知して名前、場所、メッセージを完全表示します。</p>
+          <strong>一致したら通知案</strong>
+          <p>家族キーが一致した時だけ、通知して名前、場所、メッセージを表示する将来案です。</p>
         </div>
       </div>
     </section>
@@ -237,8 +237,8 @@
           <p>ありません。ボタンは「たすけて」と「いまの安否を入れる」だけにし、安否情報の受け渡しはアプリの裏側で自動的に行う設計です。</p>
         </details>
         <details>
-          <summary>家族の安否はどうやって全文表示しますか？</summary>
-          <p>事前に家族QRコードで同じ家族キーを登録します。リレーで届いたデータが家族キーと一致した場合だけ、通知して名前、場所、メッセージを完全表示します。</p>
+          <summary>家族の安否を全文表示できますか？</summary>
+          <p>初期版では、一般画面に安否の詳細を一覧表示しません。家族だけに全文表示する機能は、QRコードなどで家族キーを共有する将来案として整理しています。</p>
         </details>
         <details>
           <summary>誰でも使える画面ですか？</summary>
