@@ -281,8 +281,9 @@ h2 {
 }
 
 .hero-visual {
-  aspect-ratio: 16 / 9.8;
+  box-sizing: border-box;
   margin-top: 8px;
+  padding: 12px;
   min-width: 0;
   overflow: hidden;
   border-radius: 32px;
@@ -293,10 +294,7 @@ h2 {
 .hero-visual img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 54%;
-  transform: scale(1.08);
+  height: auto;
 }
 
 .trust-strip {
@@ -621,8 +619,8 @@ h2 {
 
   .hero-visual {
     order: 2;
-    aspect-ratio: 16 / 9.2;
     margin-top: 0;
+    padding: 14px;
     border-radius: 24px;
   }
 
@@ -687,15 +685,6 @@ h2 {
 
   .hero-actions a {
     width: 100%;
-  }
-
-  .hero-visual {
-    aspect-ratio: 1.18 / 1;
-  }
-
-  .hero-visual img {
-    object-position: 56% 58%;
-    transform: scale(1.12);
   }
 
   .hero-points li {
